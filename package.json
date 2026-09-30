@@ -10,7 +10,9 @@
     "release:major": "npm version major && npm run release",
     "release:minor": "npm version minor && npm run release",
     "release:patch": "npm version patch && npm run release",
-    "release:beta": "npm version prepatch --preid beta && npm publish --access public --tag beta",
+    "release:beta": "npm publish --access public --tag beta",
+    "beta:start": "npm version prepatch --preid beta && npm run release:beta",
+    "beta:next": "npm version prerelease --preid beta && npm run release:beta",
     "unpublish:all": "npm unpublish @padenjones/utils --force",
     "view": "npm view @padenjones/utils"
   },
