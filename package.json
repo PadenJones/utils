@@ -6,8 +6,8 @@
   "main": "index.js",
   "scripts": {
     "pack:dry": "npm pack --dry-run",
-    "publish": "npm publish --access public",
-    "publish:patch": "npm version patch && npm run publish",
+    "release": "npm publish --access public",
+    "release:patch": "npm version patch && npm run publish",
     "unpublish:all": "npm unpublish @padenjones/utils --force",
     "view": "npm view @padenjones/utils"
   },
