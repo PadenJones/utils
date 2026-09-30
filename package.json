@@ -1,6 +1,6 @@
 {
   "name": "@padenjones/utils",
-  "version": "1.0.8-beta.1",
+  "version": "1.0.8",
   "description": "",
   "type": "module",
   "main": "index.js",
