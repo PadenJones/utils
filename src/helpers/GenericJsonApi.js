@@ -15,6 +15,7 @@ export class GenericJsonApiError extends Error {
 
 const GenericJsonApi = ({
   base = "",
+  port = "",
   headers: globalHeaders = {},
   throwOnError: globalThrowOnError = true,
   transformData: globalTransformData,
@@ -37,6 +38,10 @@ const GenericJsonApi = ({
       throwOnError = globalThrowOnError,
       transformData = globalTransformData,
     } = {}) => {
+      if (port) {
+        route += `:${port}`;
+      }
+
       const path = compile(route)(pathParams);
 
       const searchParams = queryParams
