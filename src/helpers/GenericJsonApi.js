@@ -39,7 +39,7 @@ const GenericJsonApi = ({
       transformData = globalTransformData,
     } = {}) => {
       if (port) {
-        route += `:${port}`;
+        base += `:${port}`;
       }
 
       const path = compile(route)(pathParams);
